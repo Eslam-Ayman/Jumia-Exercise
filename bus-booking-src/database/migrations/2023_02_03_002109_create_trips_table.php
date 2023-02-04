@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('bus_id')->references('id')->on('buses')->onDelete('cascade');
             $table->string('title');
+            $table->dateTime('departure_at');
             $table->timestamps();
         });
     }

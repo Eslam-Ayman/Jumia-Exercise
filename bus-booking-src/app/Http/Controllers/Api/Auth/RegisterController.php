@@ -50,8 +50,7 @@ class RegisterController extends Controller
         if ( ! $user = Cache::pull($request->verification_code) )
             return entityNotFound();
 
-        $user = User::create($user + ['email_verified_at' => date('Y-m-d H:i:s')])
-                        ->assignRole('trial-user');
+        $user = User::create($user + ['email_verified_at' => date('Y-m-d H:i:s')]);
 
         $authToken = $user->createToken('auth-token'); // $user->api_token;
 

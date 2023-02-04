@@ -34,6 +34,6 @@ class BookingController extends Controller
         if (isset($booking))
             return new BookingResource($booking);
         else
-            return errorMessage('Selected seat is not available for this tripe', '404');
+            return errorMessage('Selected seat is not available for this trip or expected departure', '404');
     }
 }
