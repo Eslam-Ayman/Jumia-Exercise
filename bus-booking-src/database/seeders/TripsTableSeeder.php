@@ -20,8 +20,8 @@ class TripsTableSeeder extends Seeder
             	'stations' => [
             		['city_id' => 6, 'order_column' => 1],
             		['city_id' => 9, 'order_column' => 2],
-            		['city_id' => 17, 'order_column' => 4],
-            		['city_id' => 2, 'order_column' => 3],
+            		['city_id' => 17, 'order_column' => 3],
+            		['city_id' => 2, 'order_column' => 4],
             	]
         	],
             [

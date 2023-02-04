@@ -72,6 +72,7 @@ class Controller extends BaseController
 		    	
                 $results[$availableTrip->id]['start_station_id'] = $availableTrip->start_station_id;
                 $results[$availableTrip->id]['end_station_id'] = $availableTrip->end_station_id;
+                $results[$availableTrip->id]['bus_id'] = $availableTrip->bus_id;
                 $results[$availableTrip->id]['booked_seats'] = $bookedSeats;
         }
 
