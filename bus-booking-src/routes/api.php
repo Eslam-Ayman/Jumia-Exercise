@@ -47,4 +47,6 @@ Route::middleware(['auth:sanctum'])
 
 	Route::post('bookings', 'BookingController@store'); // to book a seat
 	Route::get('seats', 'SeatController@index'); // to get available seats
+
+    Route::post('trips', 'TripController@store'); // to add new trip with stations
 });
