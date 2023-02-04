@@ -28,7 +28,7 @@ or you can use your prefer extension to your browser for example [ RestMan for o
 8. run this command `php artisan serve` through terminal
 9. Import Attached API collection file `bus-booking.postman_collection.json` into Postman
 10. Or you can click on **Run in Postman** button (top-right corner) in the following documentation
-        - https://documenter.getpostman.com/view/21779593/2s935oKiWj
+    - https://documenter.getpostman.com/view/21779593/2s935oKiWj
 > It is **important** to select `No Environment` in your Postamn at the top-right corner in Postman if you want to use ready made variables in the collection itslf.
 
 ## APIs Overview
@@ -49,8 +49,8 @@ Current domain in the attached collection is http://127.0.0.1:8000
 
 ## APIs Usage (Follow the following steps in the same order)
 1. click on `Auth` directory then `login` API then click on `send`
-        - no need to register new user you can use current user in the API body.
-        - no need to copy and replace auth token from API response it will be replaced automatically
+    - no need to register new user you can use current user in the API body.
+    - no need to copy and replace auth token from API response it will be replaced automatically
 2. To test first API 
     - click on `bookings` directory then `bookings/store` API then clcik on `send`
 3. To test second API
