@@ -23,8 +23,8 @@ or you can use your prefer extension to your browser for example [ RestMan for o
  5. Create an empty database for the application through phpmyadmin
  6. In the .env file, add database information to allow Laravel to connect to the database
  7. Migrate the database
-    - `php artisian migrate:fresh --seed`
-    - if you don't need to migrate so import `bus_booking.sql` in your DB
+    - `php artisian migrate:fresh --seed`, seeders contain on proper data to be tested.
+    - if you don't need to migrate, so you can import `bus_booking.sql` that contain on proper data to be tested as well.
 8. run this command `php artisan serve` through terminal
 9. Import Attached API collection file `bus-booking.postman_collection.json` into Postman
 10. Or you can click on **Run in Postman** button (top-right corner) in the following documentation
@@ -60,7 +60,7 @@ or you can use your prefer extension to your browser for example [ RestMan for o
 <br> To use this API `trips/store` or to add custom trips to test them:
 you should first check out to another branch  `gist checkout create-trip-internal` 
 This API should be using for admin role only but becuase of there is no muliple users in the requiremnts I did this API internally to me to insert some trips into DB or you can insert them directly from DB.
-<br> This API should be testing purposes
+<br> This API should be for testing purposes
 
 
 ## Program's Output Example
