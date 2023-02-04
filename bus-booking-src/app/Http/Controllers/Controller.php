@@ -18,6 +18,7 @@ class Controller extends BaseController
     public function getAvailableTrips($request)
     {
         $seatId = $request->seat_id;
+        $expectingDepartureRange = $request->expecting_departure_range;
 
         $startStationQuery = Station::where('city_id', $request->start_city_id);
         $endStationQuery = Station::where('city_id', $request->end_city_id);
@@ -43,6 +44,10 @@ class Controller extends BaseController
                 $join->on('trips.bus_id', 'buses.id');
                 if ($seatId)
                     $join->whereRaw("buses.id = (select bus_id from `seats` where `id` = $seatId)");
+            })
+            ->when($expectingDepartureRange, function ($query) use ($expectingDepartureRange) {
+                $query->where('trips.departure_at', '>=', $expectingDepartureRange['from'])
+                ->where('trips.departure_at', '<=', $expectingDepartureRange['to']);
             })
             ->whereRaw('start_station.order_column < end_station.order_column')
             ->get();

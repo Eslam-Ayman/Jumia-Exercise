@@ -15,13 +15,8 @@ class SeatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(SeatRequest $request)
     {
-        $request->validate([
-            'start_city_id' => 'required|exists:cities,id',
-            'end_city_id' => 'required|exists:cities,id',
-        ]);
-
         $bookedSeats = collect( $this->getBookedSeats($request) );
         $busIds = $bookedSeats->pluck('bus_id')->toArray();
         $bookedSeatIds = $bookedSeats->pluck('booked_seats')->collapse()->toArray();
