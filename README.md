@@ -33,7 +33,7 @@ or you can use your prefer extension to your browser for example [ RestMan for o
 
 ## APIs Overview
 > Note: If you followed the previous steps to the end, so no need to adjust any variables in the collection like domain or even auth token it will be replaced automatically once you login
-Current domain in the attached collection is http://127.0.0.1:8000
+<br> Current domain in the attached collection is http://127.0.0.1:8000
 
 | Name  | Method   | URL  | Header | Body   | Description |
 | :---: |:-------:| :---: | :-----:| :-----:| :-----: |
@@ -49,7 +49,7 @@ Current domain in the attached collection is http://127.0.0.1:8000
 
 ## APIs Usage (Follow the following steps in the same order)
 1. click on `Auth` directory then `login` API then click on `send`
-    - no need to register new user you can use current user in the API body.
+    - no need to register new user you can use current user in this API body.
     - no need to copy and replace auth token from API response it will be replaced automatically
 2. To test first API 
     - click on `bookings` directory then `bookings/store` API then clcik on `send`
@@ -57,10 +57,10 @@ Current domain in the attached collection is http://127.0.0.1:8000
     - click on `seats` directory then `seats/index` API then clcik on `send`
 
 > Note: This API `trips/store` was not be required but I created it for me internally.
-To use this API `trips/store` or to add custom trips to test them:
+<br> To use this API `trips/store` or to add custom trips to test them:
 you should first check out to another branch  `gist checkout create-trip-internal` 
 This API should be using for admin role only but becuase of there is no muliple users in the requiremnts I did this API internally to me to insert some trips into DB or you can insert them directly from DB.
-This API should be testing purposes
+<br> This API should be testing purposes
 
 
 ## Program's Output Example
